@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Dirigible Captain Sign-up</h2>
+
+<form action='/welcome' method="POST">
+    <table>
+        <tr>
+            <td><label>Name: </label></td>
+            <td>
+                <input type="text" name="user_name"/>
+                <span class="error">{{ error }}</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Password: </label></td>
+            <td>
+                <input type="password" name="password"/>
+                <span class="error">{{ error }}</span>
+                <aside>Your password can be dumb.</aside>
+            </td>
+        <tr>
+            <td><label>Verify Password: </label></td>
+            <td>
+                <input type="password" name="verify_password"/>
+                <span class="error">{{ error }}</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Choose Color: 
+            <input type="color" name="dirigible_color"/>
+            </label></td>
+        </tr>
+    </table>      
+    <input type="submit" name="submit"/>
+<!---
+{% if error %}
+<p class='error'>{{ error }}</p>
+{% endif %}
+-->
+{% endblock %}
+
