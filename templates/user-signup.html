@@ -8,31 +8,40 @@
         <tr>
             <td><label>Name: </label></td>
             <td>
-                <input type="text" name="user_name"/>
-                <span class="error">{{ error }}</span>
+                <input type="text" name="user_name" value= "{{ name }}" />
+                <span class="error">{{ name_error }}</span>
             </td>
         </tr>
         <tr>
             <td><label>Password: </label></td>
             <td>
                 <input type="password" name="password"/>
-                <span class="error">{{ error }}</span>
-                <aside>Your password can be dumb.</aside>
+                <span class="error">{{ pass_error }}</span>
+                <aside>Your password can be bad.</aside>
             </td>
         <tr>
             <td><label>Verify Password: </label></td>
             <td>
-                <input type="password" name="verify_password"/>
-                <span class="error">{{ error }}</span>
+                <input type="password" name="verify_password" />
+                <span class="error">{{ veri_error }}</span>
             </td>
         </tr>
         <tr>
-            <td><label>Choose Color: 
+            <td><label>Choose Color: </label></td>
+            <td>
             <input type="color" name="dirigible_color"/>
-            </label></td>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Email(optional): </label></td>
+            <td>
+                    <input type="text" name="email" value="{{email}}" />
+                    <span class="error">{{ email_error }}</span>
+            </td>
         </tr>
     </table>      
     <input type="submit" name="submit"/>
+</form>
 <!---
 {% if error %}
 <p class='error'>{{ error }}</p>
