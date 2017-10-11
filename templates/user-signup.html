@@ -3,27 +3,27 @@
 {% block content %}
 <h2>Dirigible Captain Sign-up</h2>
 
-<form action='/welcome' method="POST">
+<form action='/' method="POST">
     <table>
         <tr>
             <td><label>Name: </label></td>
             <td>
-                <input type="text" name="user_name" value= "{{ name }}" />
-                <span class="error">{{ name_error }}</span>
+                <input type="text" name="user_name" value= "{{ user_name }}" />
+                <span class="name_error" value="name_error">{{ name_error }}</span>
             </td>
         </tr>
         <tr>
             <td><label>Password: </label></td>
             <td>
                 <input type="password" name="password"/>
-                <span class="error">{{ pass_error }}</span>
+                <span class="pass_error" >{{ pass_error }}</span>
                 <aside>Your password can be bad.</aside>
             </td>
         <tr>
             <td><label>Verify Password: </label></td>
             <td>
                 <input type="password" name="verify_password" />
-                <span class="error">{{ veri_error }}</span>
+                <span class="veri_error" >{{ veri_error }}</span>
             </td>
         </tr>
         <tr>
@@ -36,16 +36,12 @@
             <td><label>Email(optional): </label></td>
             <td>
                     <input type="text" name="email" value="{{email}}" />
-                    <span class="error">{{ email_error }}</span>
+                    <span class="email_error" >{{ email_error }}</span>
             </td>
         </tr>
     </table>      
     <input type="submit" name="submit"/>
 </form>
-<!---
-{% if error %}
-<p class='error'>{{ error }}</p>
-{% endif %}
--->
+
 {% endblock %}
 
